@@ -1,0 +1,150 @@
+table,
+td,
+tr,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.home {
+  position: relative;
+  @include set-size(100%, 100vh);
+  overflow: hidden;
+  .haeder {
+    @include set-size(1200px, 80px);
+    min-width: 1200px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+    margin: 0 auto;
+    .title {
+      @include set-size(auto, auto);
+      @include set-font($head, 45px);
+      font-weight: 800;
+      text-indent: 10px;
+      flex-grow: 1;
+    }
+    #git {
+      @include set-size(50px, 50px);
+      margin-right: 15px;
+      cursor: pointer;
+    }
+    .tip {
+      position: relative;
+      @include set-size(50px, 50px);
+      margin-right: 15px;
+      img {
+        @include set-size(100%, 100%);
+      }
+      span {
+        pointer-events: none;
+        @include set-size(250px, 50px);
+        @include set-font($head, 25px);
+        position: absolute;
+        top: 50px;
+        left: -100px;
+        line-height: 50px;
+        background: black;
+        color: white;
+        text-align: center;
+        border-radius: 30px;
+        opacity: 0;
+      }
+    }
+    #tagList {
+      @include set-size(100px, 40px);
+      @include set-font($inner, 25px);
+      margin-right: 10px;
+      border-radius: 5px;
+      text-indent: 10px;
+      -webkit-appearance: none;
+    }
+  }
+  .body {
+    @include set-size(1150px, 550px);
+    min-width: 1150px;
+    margin: 0 auto;
+    position: relative;
+    #itemtable {
+      @include set-size(100%, auto);
+      overflow: scroll;
+      overflow-x: hidden;
+      padding: 5px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      thead {
+        tr {
+          height: 50px;
+        }
+      }
+      tbody {
+        .iindex {
+          width: 50px;
+        }
+        .iname {
+          width: 350px;
+        }
+        .pos {
+          width: 200px;
+        }
+        input {
+          text-align: center;
+          @include set-font($inner, 30px);
+          height: 50px;
+          border: none;
+          background: transparent;
+          &::-webkit-inner-spin-button {
+            appearance: none;
+          }
+          &:focus {
+            outline: none;
+            width: 100%;
+          }
+        }
+        .reBtn {
+          @include set-size(25px, 25px);
+          background: white;
+          border: none;
+          img {
+            @include set-size(100%, 100%);
+          }
+        }
+        .seBtns {
+          button {
+            @include set-size(25px, 25px);
+            background: white;
+            border: none;
+            img {
+              @include set-size(100%, 100%);
+            }
+            &:first-child {
+              margin-right: 5px;
+            }
+            &:last-child {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+    &::-webkit-scrollbar {
+      width: 10px;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: gray;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background: black;
+    }
+  }
+  .footer {
+    @include set-size(1200px, 50px);
+    @include set-font($head, 25px);
+    text-align: center;
+    border-top: 1px solid black;
+    margin: 0 auto;
+    line-height: 50px;
+  }
+}

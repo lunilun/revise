@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Cute+Font&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
+
+$head: "Dongle", sans-serif;
+$inner: "Cute Font", cursive;
+
+@mixin set-size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin set-font($style, $size) {
+  font-size: $size;
+  font-family: $style;
+}
